@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'accounts',
+    'realtors',
 ]
 
 MIDDLEWARE = [
@@ -146,3 +147,5 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_ALLOW_ALL = True
 
 FILE_UPLOAD_PERMISSION = 0o640
+
+AUTH_USER_MODEL = 'accounts.UserAccount'
